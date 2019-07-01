@@ -17,7 +17,6 @@ const BeerSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Query helper
 BeerSchema.query.drafts = function () {
   return this.where({
     status: 'DRAFT'

@@ -1,9 +1,7 @@
 const router = require('express').Router();
 
-// controllers
 const beersController = require('../controllers/beersController');
 
-// routes
 router.get(`/new`, beersController.new);
 router.get(`/drafts`, beersController.drafts);
 router.get(`/published`, beersController.published);
