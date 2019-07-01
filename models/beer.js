@@ -10,8 +10,8 @@ const BeerSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ['In Inventory', 'Sold'],
-    default: 'In Inventory'
+    enum: ['DRAFT', 'PUBLISHED'],
+    default: 'DRAFT'
   }
 }, {
   timestamps: true
@@ -19,13 +19,13 @@ const BeerSchema = new mongoose.Schema({
 
 BeerSchema.query.drafts = function () {
   return this.where({
-    status: 'In Inventory'
+    status: 'DRAFT'
   });
 };
 
 BeerSchema.query.published = function () {
   return this.where({
-    status: 'Sold'
+    status: 'PUBLISHED'
   });
 };
 
