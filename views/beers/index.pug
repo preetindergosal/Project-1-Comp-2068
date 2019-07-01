@@ -22,6 +22,6 @@ block content
               td
                 a(href=`/beers/${beer.id}/edit`) edit
                 = ' | '
-                form.destroy(action=`/beers/destroy`, method="POST", onsubmit=`return confirm("Are you absolutely positively sure you want to permently delete this beer?")`)
+                form.destroy(action=`/beers/destroy`, method="POST", onsubmit=`return confirm("Are you sure you want to permently delete this beer from list?")`)
                   input(type="hidden", name="id", value=beer.id)
                   input(type="submit", value="delete")
