@@ -10,8 +10,8 @@ const BeerSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ['DRAFT', 'PUBLISHED'],
-    default: 'DRAFT'
+    enum: ['In Inventory', 'Sold'],
+    default: 'In Inventory'
   }
 }, {
   timestamps: true

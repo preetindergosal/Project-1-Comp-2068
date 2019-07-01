@@ -68,7 +68,7 @@ exports.published = (req, res) => {
   Beer.find().published()
     .then(published => {
       res.render('beers/index', {
-        title: 'Published',
+        title: 'Sold List',
         beers: published
       });
     })
