@@ -19,13 +19,13 @@ const BeerSchema = new mongoose.Schema({
 
 BeerSchema.query.drafts = function () {
   return this.where({
-    status: 'DRAFT'
+    status: 'In Inventory'
   });
 };
 
 BeerSchema.query.published = function () {
   return this.where({
-    status: 'PUBLISHED'
+    status: 'Sold'
   });
 };
 
